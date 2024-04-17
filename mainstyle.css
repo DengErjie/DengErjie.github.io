@@ -1,0 +1,148 @@
+/* 基本HTML元素的全局样式 */
+html {
+    height: 100%;
+}
+
+body {
+    font-family:黑体, 宋体 'Times New Roman', Times, serif; /* 中英文字体设置 */
+    background-color: #c6d3ff; /* 主页背景颜色 */
+    margin: 20px; /* 页边距 */
+    color: #333; /* 基础文字颜色 */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* 链接样式 */
+a {
+    color: #333333;
+    text-decoration: none; /* 移除下划线 */
+    transition: color 0.3s ease-in-out; /* 平滑颜色过渡 */
+}
+
+a:hover,
+a:focus {
+    color: #fff; /* 悬停时文字颜色 */
+    text-decoration: none; /* 悬停时移除下划线（如有需要）*/
+}
+
+/* 导航栏样式 */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中导航项 */
+    text-align: center;
+    padding: 10px; /* 导航栏和图片之间的距离 */
+    margin-left: auto;
+}
+
+.navbar ul {
+    list-style-type: none; /* 移除列表项前的默认标记 */
+    padding: 0; /* 移除默认的padding */
+}
+
+.navbar li {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black; /* 设置链接颜色 */
+}
+
+.navbar ul li a:hover {
+    color: #5ad52e; /* 导航项悬停颜色 */
+}
+
+/* 主内容区 */
+main {
+    background-color: #fff; /* 内容背景颜色 */
+    padding: 20px; /* 内边距 */
+}
+
+div{
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    border: 5px solid rgb(4, 177, 189);
+    padding: 50px;
+    margin: 30px;
+  }
+  .centered-div {
+    margin: 0 auto; /* 水平居中div */
+    width: 60%; /* 这里设定了div的宽度为容器的70%，可以根据实际需要调整 */
+    /* 其他样式根据需要添加 */
+  }
+ 
+  .image-container {
+    display: flex;
+    justify-content: center; /* 按需调整对齐方式 */
+    align-items: center; /* 垂直居中 */
+    margin: 0 auto;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 表格样式 */
+table {
+    border-collapse: collapse; /* 合并表格边框 */
+    width: 100%; /* 表格宽度 */
+    margin-top: 20px; /* 上边距 */
+}
+
+th, td {
+    border: 1px solid #ddd; /* 单元格边框 */
+    padding: 10px; /* 单元格内边距 */
+}
+
+th {
+    background-color: #f3f3f3; /* 表头背景色 */
+    color: #333; /* 表头文字颜色 */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* 隔行颜色 */
+}
+
+/* 脚注样式 */
+footer {
+    background-color: #333; /* 脚注背景颜色 */
+    color: #fff;
+    text-align:center;
+    padding: 10px 0;
+    position:relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    
+    /* 在较小屏幕上，导航栏应该变成堆叠布局 */
+    nav ul {
+        flex-direction: column;
+    }
+    
+    /* 导航项全宽展示 */
+    nav ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
